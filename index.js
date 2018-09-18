@@ -46,6 +46,14 @@ client.on("message", async message => {
       const m = await message.channel.send("Ping?");
       m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
     }
+  //Sending message to candy hunt channel
+  if(command == "candy"){
+      //sending message to specific channel
+      const sayMessage = args.join(" ");
+      message.delete().catch(O_o=>{});
+      const channel = client.channels.find('candy_hunt_rare_pokemon', channelName);
+      channel.sendMessage(sayMessage + ' by: ' + message.author);
+  }
     
     if(command === "cd") {
       // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
