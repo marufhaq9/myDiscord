@@ -52,7 +52,7 @@ client.on("message", async message => {
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
       const channel = client.channels.find('candy_hunt_rare_pokemon', channelName);
-      channel.sendMessage(sayMessage + ' by: ' + message.author);
+      channel.send(sayMessage + ' by: ' + message.author);
   }
     
     if(command === "cd") {
