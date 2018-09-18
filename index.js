@@ -67,15 +67,228 @@ client.on("message", async message => {
 
       const d = getDistanceFromLatLonInKm(args[0],args[1],args[2],args[3]);
       const mod = Math.round(d*100)/100;
-      const bug = cdTimer(mod);
+      /*const bug = cdTimer(mod);
       if(Math.round(d)<1500){
       message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is '+ Math.round(bug*100)/100 + ' minutes.');
     }
     if(Math.round(d)>=1500){
         message.channel.send('Your provided coordinates distance is ' + mod + 'km . Cooldown is 120 minutes.');
-    }
+    }*/
       //if(mod)
       //message.channel.send(Math.round(d)+'km');
+      if(mod<1){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 0 minutes.');
+    }
+    if(mod==1){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 30 seconds.');
+    }
+    if(mod>1 && mod<=2){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 minutes.');
+    }
+    if(mod>2 && mod<=5){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 3 minutes.');
+    }
+    if(mod>5 && mod<=8){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 4 minutes.');
+    }
+    if(mod>8 && mod<=11){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 6 minutes.');
+    }
+    if(mod>11 && mod<=15){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 8 minutes.');
+    }
+    if(mod>15 && mod<=18){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 9 minutes.');
+    }
+    if(mod>18 && mod<=20){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 11 minutes.');
+    }
+    if(mod>21 && mod<=25){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 14 minutes.');
+    }
+    if(mod>25 && mod<=30){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 15 minutes.');
+    }
+    if(mod>30 && mod<=35){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 16 minutes.');
+    }
+    if(mod>35 && mod<=40){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 18 minutes.');
+    }
+    if(mod>40 && mod<=45){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 19 minutes.');
+    }
+    if(mod>45 && mod<=50){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 20 minutes.');
+    }
+    if(mod>50 && mod<=58){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 21 minutes.');
+    }
+    if(mod>59 && mod<=70){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 22 minutes.');
+    }
+    if(mod>71 && mod<=75){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 23 minutes.');
+    }
+    if(mod>75 && mod<=82){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 24 minutes.');
+    }
+    if(mod>82 && mod<=90){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 25 minutes.');
+    }
+    if(mod>90 && mod<=100){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 26 minutes.');
+    }
+    if(mod>100 && mod<=110){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 28 minutes.');
+    }
+    if(mod>110 && mod<=120){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 30 minutes.');
+    }
+    if(mod>120 && mod<=130){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 32 minutes.');
+    }
+    if(mod>130 && mod<=140){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 33 minutes.');
+    }
+    if(mod>140 && mod<=150){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 34 minutes.');
+    }
+    if(mod>150 && mod<=160){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 35 minutes.');
+    }
+    if(mod>160 && mod<=170){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 36 minutes.');
+    }
+    if(mod>170 && mod<=180){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 37 minutes.');
+    }
+    if(mod>180 && mod<=190){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 38 minutes.');
+    }
+    if(mod>190 && mod<=200){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 39 minutes.');
+    }
+    if(mod>200 && mod<=210){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 40 minutes.');
+    }
+    if(mod>210 && mod<=220){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 41 minutes.');
+    }
+    if(mod>220 && mod<=230){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 42 minutes.');
+    }
+    if(mod>230 && mod<=240){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 43 minutes.');
+    }
+    if(mod>240 && mod<=250){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 44 minutes.');
+    }
+    if(mod>250 && mod<=260){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 45 minutes.');
+    }
+    if(mod>260 && mod<=270){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 46 minutes.');
+    }
+    if(mod>270 && mod<=280){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 47 minutes.');
+    }
+    if(mod>280 && mod<=290){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 48 minutes.');
+    }
+    if(mod>290 && mod<=300){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 49 minutes.');
+    }
+    if(mod>300 && mod<=310){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 49 minutes.');
+    }
+    if(mod>310 && mod<=340){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 51 minutes.');
+    }
+    if(mod>340 && mod<=380){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 53 minutes.');
+    }
+    if(mod>380 && mod<=420){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 55 minutes.');
+    }
+    if(mod>420 && mod<=460){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 57 minutes.');
+    }
+    if(mod>460 && mod<=500){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 0 minutes.');
+    }
+    if(mod>500 && mod<=550){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 5 minutes.');
+    }
+    if(mod>550 && mod<=590){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 9 minutes.');
+    }
+    if(mod>590 && mod<=640){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 13 minutes.');
+    }
+    if(mod>640 && mod<=700){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 15 minutes.');
+    }
+    if(mod>700 && mod<=750){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 17 minutes.');
+    }
+    if(mod>750 && mod<=800){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 18 minutes.');
+    }
+    if(mod>800 && mod<=830){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 20 minutes.');
+    }
+    if(mod>830 && mod<=870){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 21 minutes.');
+    }
+    if(mod>870 && mod<=900){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 22 minutes.');
+    }
+    if(mod>900 && mod<=950){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 25 minutes.');
+    }
+    if(mod>950 && mod<=980){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 27 minutes.');
+    }
+    if(mod>980 && mod<=1000){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 30 minutes.');
+    }
+    if(mod>1000 && mod<=1030){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 35 minutes.');
+    }
+    if(mod>1030 && mod<=1070){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 38 minutes.');
+    }
+    if(mod>1070 && mod<=1100){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 40 minutes.');
+    }
+    if(mod>1100 && mod<=1130){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 42 minutes.');
+    }
+    if(mod>1130 && mod<=1170){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 45 minutes.');
+    }
+    if(mod>1170 && mod<=1200){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 48 minutes.');
+    }
+    if(mod>1200 && mod<=1250){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 51 minutes.');
+    }
+    if(mod>1250 && mod<=1300){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 53 minutes.');
+    }
+    if(mod>1350 && mod<=1400){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 56 minutes.');
+    }
+    if(mod>1400 && mod<=1450){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 58 minutes.');
+    }
+    if(mod>1450 && mod<1500){
+      message.reply('Your provided coordinates distance is ' + mod + 'km . Cooldown is 1 hour 59 minutes.');
+    }
+    if(mod>=1500){
+        message.channel.send('Your provided coordinates distance is ' + mod + 'km . Cooldown is 120 minutes(2 hours).');
+    }
     }
     
     if(command === "kick") {
