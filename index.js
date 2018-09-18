@@ -51,8 +51,9 @@ client.on("message", async message => {
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
-      const channelm = client.channels.find('candy_hunt_rare_pokemon', channelName);
-      channelm.send(sayMessage + ' by: ' + message.author);
+      guildObj.defaultChannel.send(sayMessage);
+      //const channelm = client.channels.find('candy_hunt_rare_pokemon', channelName);
+      //channelm.send(sayMessage + ' by: ' + message.author);
   }
     
     if(command === "cd") {
