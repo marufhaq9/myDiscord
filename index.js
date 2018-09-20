@@ -56,6 +56,17 @@ client.on("message", async message => {
       //channelm.send(sayMessage + ' by: ' + message.author);
   }
     
+  //Sending message to candy hunt channel
+  if(command === "80"){
+      //sending message to specific channel
+      const sayMessage = args.join(" ");
+      message.delete().catch(O_o=>{});
+      client.channels.get("387660291879469059").send(sayMessage + '\n by: '+ message.author);
+      //const channelm = client.channels.find('candy_hunt_rare_pokemon', channelName);
+      //channelm.send(sayMessage + ' by: ' + message.author);
+  }
+    
+  
     if(command === "cd") {
       // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
       // To get the "message" itself we join the `args` back into a string with spaces: 
