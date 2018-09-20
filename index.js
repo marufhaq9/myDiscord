@@ -51,7 +51,7 @@ client.on("message", async message => {
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
-      client.channels.get("387692816999907328").send(sayMessage + ' by: '+ message.author);
+      client.channels.get("387692816999907328").send(sayMessage + '\n by: '+ message.author);
       //const channelm = client.channels.find('candy_hunt_rare_pokemon', channelName);
       //channelm.send(sayMessage + ' by: ' + message.author);
   }
