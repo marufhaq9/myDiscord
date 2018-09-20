@@ -47,11 +47,11 @@ client.on("message", async message => {
       m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
     }
   //Sending message to candy hunt channel
-  if(command == "candy"){
+  if(command === "candy"){
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
-      guildObj.defaultChannel.send(sayMessage);
+      client.channels.get("387692816999907328").send(sayMessage + ' by: '+ message.author);
       //const channelm = client.channels.find('candy_hunt_rare_pokemon', channelName);
       //channelm.send(sayMessage + ' by: ' + message.author);
   }
