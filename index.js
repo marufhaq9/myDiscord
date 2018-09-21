@@ -310,10 +310,6 @@ client.on("message", async message => {
     else if(mod>=1500){
         message.channel.send('Your provided coordinates distance is ' + mod + 'km . Cooldown is 120 minutes(2 hours).');
     }
-      else
-      {
-         return message.reply('Invalid Parameter!');
-      }
     }
     
     if(command === "kick") {
