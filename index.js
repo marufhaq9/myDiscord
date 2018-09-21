@@ -51,7 +51,7 @@ client.on("message", async message => {
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
-    if(!saymessage.length==0)
+    if(saymessage.length>0)
     {
       client.channels.get("387692816999907328").send(sayMessage + '\n by: '+ message.author);
     }
@@ -67,7 +67,7 @@ client.on("message", async message => {
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
-    if(!saymessage.length==0)
+    if(saymessage.length>0)
     {
       client.channels.get("387660291879469059").send(sayMessage + '\n by: '+ message.author);
     }
