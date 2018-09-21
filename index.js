@@ -312,7 +312,7 @@ client.on("message", async message => {
     }
       else
       {
-        message.reply('Invalid Parameter!');
+         return message.reply('Invalid Parameter!');
       }
     }
     
