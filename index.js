@@ -51,13 +51,7 @@ client.on("message", async message => {
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
-    if(saymessage.length>0)
-    {
       client.channels.get("387692816999907328").send(sayMessage + '\n by: '+ message.author);
-    }
-    else{
-      message.reply('Invalid Parameter!');
-    }
       //const channelm = client.channels.find('candy_hunt_rare_pokemon', channelName);
       //channelm.send(sayMessage + ' by: ' + message.author);
   }
@@ -67,13 +61,7 @@ client.on("message", async message => {
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
-    if(saymessage.length>0)
-    {
       client.channels.get("387660291879469059").send(sayMessage + '\n by: '+ message.author);
-    }
-    else{
-      message.reply('Invalid Parameter!');
-    }
   }
     
   
