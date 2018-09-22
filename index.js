@@ -73,10 +73,10 @@ client.on("message", async message => {
   }
   
   //Sending message to candy hunt channel
-  if(command === "smokescreen"){
+  if(command === "smokescreen" && const sayMessage = args.join(" ").lenght == 0){
       //sending message to specific channel
-      const sayMessage = args.join(" ");
-      message.delete().catch(O_o=>{});
+      //const sayMessage = args.join(" ");
+      message.delete().catch(command);
       message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because of spamming`);
   }
     
