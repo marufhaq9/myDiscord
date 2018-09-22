@@ -19,6 +19,14 @@ if(message.content == "?cd"){
 }
 });*/
 
+client.on("msg", function (msg){
+  if(msg.content === 'smokecreen'){
+    msg.delete().catch(O_o=>{});
+      msg.reply(`${member.user.tag} has been kicked by ${msg.author.tag} because of spamming`);
+  }
+}
+);
+
 client.on("message", async message => {
     // This event will run on every single message received, from any channel or DM.
     
