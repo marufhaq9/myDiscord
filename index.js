@@ -73,7 +73,7 @@ client.on("message", async message => {
   }
   
   //Sending message to candy hunt channel
-  if(command === "smokescreen" && const sayMessage = args.join(" ").lenght == 0){
+  if(command === "smokescreen"){
       //sending message to specific channel
       //const sayMessage = args.join(" ");
       message.delete().catch(command);
