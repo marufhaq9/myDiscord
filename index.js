@@ -63,6 +63,14 @@ client.on("message", async message => {
       message.delete().catch(O_o=>{});
       client.channels.get("387660291879469059").send(sayMessage + '\n by: '+ message.author);
   }
+  
+  //Sending message to candy hunt channel
+  if(command === "smokescreen"){
+      //sending message to specific channel
+      const sayMessage = args.join(" ");
+      message.delete().catch(O_o=>{});
+      message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because of spamming`);
+  }
     
   
     if(command === "cd") {
