@@ -379,6 +379,8 @@ client.on("message", async message => {
       message.channel.bulkDelete(fetched)
         .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
     }
+  if(command==='')
+    message.channel.send('Invalid command');
   });
 
 //Distance from coordinates using 'Haversine' formula
