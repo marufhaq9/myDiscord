@@ -373,6 +373,7 @@ client.on("message", async message => {
   if(command!== 'cd' && command!== 'candy' && command!== '80' && command!== 'purge' && command!== 'kick' && command!== 'ban' ){
     message.channel.send('Invalid command');
   }
+}
 
 //Distance from coordinates using 'Haversine' formula
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
