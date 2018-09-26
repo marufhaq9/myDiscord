@@ -18,15 +18,6 @@ if(message.content == "?cd"){
     message.reply("this command is still in construction");
 }
 });*/
-
-client.on("msg", function (msg){
-  if(msg.content === 'smokecreen'){
-    msg.delete().catch(O_o=>{});
-      msg.reply(`${member.user.tag} has been kicked by ${msg.author.tag} because of spamming`);
-  }
-}
-);
-
 client.on("message", async message => {
     // This event will run on every single message received, from any channel or DM.
     
@@ -55,7 +46,7 @@ client.on("message", async message => {
       m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
     }
   //Sending message to candy hunt channel
-  if(command === "candy"){
+  else if(command === "candy"){
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
@@ -65,7 +56,7 @@ client.on("message", async message => {
   }
     
   //Sending message to candy hunt channel
-  if(command === "80"){
+  else if(command === "80"){
       //sending message to specific channel
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
@@ -73,7 +64,7 @@ client.on("message", async message => {
   }
   
   //Sending message to candy hunt channel
-  if(command === "smokescreen"){
+  else if(command === "smokescreen"){
       //sending message to specific channel
       //const sayMessage = args.join(" ");
       message.delete().catch(command);
@@ -81,7 +72,7 @@ client.on("message", async message => {
   }
     
   
-    if(command === "cd") {
+    else if(command === "cd") {
       // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
       // To get the "message" itself we join the `args` back into a string with spaces: 
       /*const sayMessage = args.join(" ");
@@ -316,7 +307,7 @@ client.on("message", async message => {
     }
     }
     
-    if(command === "kick") {
+    else if(command === "kick") {
       // This command must be limited to mods and admins. In this example we just hardcode the role names.
       // Please read on Array.some() to understand this bit: 
       // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
@@ -344,7 +335,7 @@ client.on("message", async message => {
   
     }
     
-    if(command === "ban") {
+    else if(command === "ban") {
       // Most of this command is identical to kick, except that here we'll only let admins do it.
       // In the real world mods could ban too, but this is just an example, right? ;)
       if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
@@ -364,7 +355,7 @@ client.on("message", async message => {
       message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
     }
     
-    if(command === "purge") {
+    else if(command === "purge") {
       // This command removes all messages from all users in the channel, up to 100.
       
       // get the delete count, as an actual number.
@@ -379,9 +370,9 @@ client.on("message", async message => {
       message.channel.bulkDelete(fetched)
         .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
     }
-  if(command==='')
+  else{
     message.channel.send('Invalid command');
-  });
+  }
 
 //Distance from coordinates using 'Haversine' formula
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
