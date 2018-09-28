@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-const { prefix, token } = require('./config.json');
+//const { prefix, token } = require('./config.json');
+const prefix = '!';
 
 //Real Codes start here
 client.on("ready",()=>{
@@ -398,4 +399,4 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
       return (dist*30)/60;
   }
 
-client.login(token);
+client.login(process.env.BOT_TOKEN);
